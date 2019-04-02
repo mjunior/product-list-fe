@@ -2,6 +2,9 @@ header{
   background: var(--navbar-bg-color);
 }
 
+header .navbar{
+  padding: .5rem 0;
+}
 .navbar .form-control{
   border: none;
   font-size: 18px;
