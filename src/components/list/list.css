@@ -1,0 +1,48 @@
+.item{
+  padding: 16px 8px;
+  border-bottom: 1px solid #eee;
+}
+
+.item_image--thumbnail{
+  width: 180px;
+  height: 180px;
+  border-radius: 4px;
+}
+
+.item_price{
+  margin-bottom: 32px;
+  line-height: 24px;
+}
+.item_price p{
+  font-size:24px;
+}
+.item_price_shipping {
+  background: url('../../assets/images/ic_shipping.png') right bottom no-repeat;
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+}
+
+.item_description{
+  line-height: 18px;
+  font-size: 18px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.25),
+only screen and (min--moz-device-pixel-ratio: 1.25),
+only screen and (-o-min-device-pixel-ratio: 1.25/1),
+only screen and (min-device-pixel-ratio: 1.25),
+only screen and (min-resolution: 200dpi),
+only screen and (min-resolution: 1.25dppx) {
+  .item_price_shipping{
+    background: url('../../assets/images/ic_shipping@2x.png.png') right bottom no-repeat;
+    height: 40px;
+    width: 40px;
+  }
+}
+
+.item .no-gutters>.col,
+.item .no-gutters>[class*=col-] {
+  padding-right: 8px;
+  padding-left: 8px;
+}
