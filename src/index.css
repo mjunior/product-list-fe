@@ -1,6 +1,10 @@
 :root {
+  --body-background: #EEE;
   --navbar-bg-color: #FFE600;
   --navbar-btn-light: #EEE;
+}
+:root body{
+  background: var(--body-background);
 }
 
 body {
@@ -11,6 +15,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
 code {

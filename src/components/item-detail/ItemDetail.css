@@ -1,0 +1,27 @@
+.detail_image img{
+  width: 100%;
+  max-width: 680px;
+}
+
+.detail_sidebar{
+  padding-top: 32px;
+  padding-right: 32px;
+}
+.detail_siderbar_title{
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 32px;
+}
+
+.detail_siderbar_price{
+  margin: 32px 0;
+}
+.detail_siderbar_price .integer {
+  font-size: 46px;
+  line-height: 46px;
+  vertical-align: top;
+}
+
+.detail_siderbar_price .decimal {
+  font-size: 16px;
+}
