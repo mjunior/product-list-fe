@@ -7,6 +7,10 @@
   padding-top: 32px;
   padding-right: 32px;
 }
+.detail_siderbar_condition{
+  font-size: 14px;
+  text-transform: uppercase;
+}
 .detail_siderbar_title{
   font-size: 24px;
   font-weight: bold;
