@@ -1,4 +1,9 @@
 import React, { Component } from 'react';
-const Breadcrumb = ({ items }) => (items.join(' > '))
+import './breadcrumb.css'
 
+const Breadcrumb = ({ items }) => (
+  <div class="breadcrumb">
+  {items.join(' > ')}
+  </div>
+)
 export default Breadcrumb
