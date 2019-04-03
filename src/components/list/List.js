@@ -13,6 +13,7 @@ class List extends Component {
   }
 
   componentDidMount() {
+    
     let searchValue = queryString.parse(this.props.location.search).search
     this.getItems(searchValue);
   }
@@ -32,14 +33,17 @@ class List extends Component {
       .then(results => {
         this.setState({items: results.items})
         this.props.handleChange(results['categories'])
-        })
+      })
   }
   render() {
+    if(this.state.items.length <= 0){
+      return(<p>Loading...</p>)
+    }
     return (
       <ul>
         { this.state.items.map(function(item,index){
           return (
-            <ItemList item={item} key={index} />
+            <li><ItemList item={item} key={index} /></li>
           )
         })}
       </ul>
