@@ -24,7 +24,11 @@ const ItemList = ({item}) => (
           <p>{item.title}</p>
         </div>
       </Col>
+      <Col md={{size:2}} className="city_name">
+        {item.city_name}
+      </Col>
     </Row>
+    <hr />
   </div></Link>)
 
 export default ItemList
