@@ -31,7 +31,6 @@ class List extends Component {
       .then(results => results.json())
       .then(results => {
         this.setState({items: results.items})
-        console.log('atualiza breadcrumb')
         this.props.handleChange(results['categories'])
         })
   }

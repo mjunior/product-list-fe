@@ -10,7 +10,6 @@ import {
 import logo from '../../assets/images/Logo_ML.png';
 import ic_Search from '../../assets/images/ic_Search.png';
 import './navbar.css';
-
 class NavBar extends Component {
 
   constructor(props, context) {

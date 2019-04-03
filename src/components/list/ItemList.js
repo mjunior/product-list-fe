@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import shippingIcon from '../../assets/images/ic_shipping.png'
-import Currency from './Currency'
+import Currency from '../../helpers/Currency'
 import {
   Container,
   Col,
@@ -18,7 +18,7 @@ const ItemList = ({item}) => (
       </Col>
       <Col className="flex-grow-1">
         <div className="item_price">
-            <p>{Currency[item.price.currency]} 90 <span className={item.free_shipping === true ? 'item_price_shipping': ''}></span></p>
+            <p>{Currency[item.price.currency]} {item.price.amount},{item.price.decimals} <span className={item.free_shipping === true ? 'item_price_shipping': ''}></span></p>
         </div>
         <div className="item_description">
           <p>{item.title}</p>
