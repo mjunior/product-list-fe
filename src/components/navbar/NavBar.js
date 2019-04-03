@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom'
 import { withRouter } from 'react-router-dom';
+import queryString from 'query-string'
 import {
   Row,
   Col,
@@ -15,7 +16,7 @@ class NavBar extends Component {
   constructor(props, context) {
     super(props, context);
     this.state = {
-      value: ''
+      value: queryString.parse(this.props.location.search).search
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -43,7 +44,7 @@ class NavBar extends Component {
             <Col xs={{ size: 9 }} sm={{ size: 9 }}>
               <form onSubmit={this.handleSubmit}>
                 <div className="input-group">
-                  <input type="text" className="form-control" placeholder="Recipient's username" aria-label="Recipient's username" value={this.state.value} onChange={this.handleChange} />
+                  <input type="text" className="form-control" placeholder="Nunca dejes de buscar" aria-label="Nunca dejes de buscar" value={this.state.value} onChange={this.handleChange} />
                   <div className="input-group-append">
                     <button type="submit" className="btn btn-light">
                       <img src={ic_Search} />
