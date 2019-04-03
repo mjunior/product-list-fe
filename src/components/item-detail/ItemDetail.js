@@ -15,6 +15,7 @@ class ItemDetail extends Component {
   }
 
   componentDidMount() {
+    
     let {id} = this.props.match.params
     this.getItem(id);
   }
@@ -24,10 +25,9 @@ class ItemDetail extends Component {
       .then(results => results.json())
       .then(results => {
         this.setState({ product: results})
+        this.props.handleChange(results['categories'])
       })
   }
-
-  
 
   render() {
     if (this.state.product === undefined){
