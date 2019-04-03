@@ -2,6 +2,10 @@
   --body-background: #EEE;
   --navbar-bg-color: #FFE600;
   --navbar-btn-light: #EEE;
+  --breadcrumb-text: #666;
+  --item-city-name: #666;
+  --item-divider: #EEE;
+  --button-primary: #3483FA;
 }
 :root body{
   background: var(--body-background);

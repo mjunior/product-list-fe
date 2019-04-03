@@ -25,6 +25,11 @@
 .detail_siderbar_price .decimal {
   font-size: 16px;
 }
+.detail_sidebar_button .btn-primary {
+  background-color: var(--button-primary);
+  border-color: var(--button-primary)
+}
+
 .detail_description{
   padding: 0 32px;
 }
