@@ -37,7 +37,7 @@ class App extends Component {
             <Col xs={{ size: 12, offset: 0 }} sm={{ size: 10, offset: 1 }}>
               <Breadcrumb items={this.state.breadcrumb}/>
               <div className="page-body">  
-                <Route path="/items/:id" component={ItemDetail} exact />
+                  <Route path="/items/:id" component={(props) => <ItemDetail {...props} handleChange={this.handleChange} />} exact />
                 <Route path="/items" component={(props) => <List {...props} handleChange={this.handleChange}/>} exact /> 
               </div>
             </Col>
