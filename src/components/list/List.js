@@ -25,11 +25,15 @@ class List extends Component {
   }
 
   getItems(searchValue) {
-    console.log('Items')
     this.setState({ searchValue: searchValue })
-    fetch(`https://api.mercadolibre.com/sites/MLA/search?q=${searchValue}`)
+    
+    fetch(`http://localhost:5000/api/items?q=${searchValue}`)
       .then(results => results.json())
-      .then(results => this.setState({items: results.results}))
+      .then(results => {
+        this.setState({items: results.items})
+        console.log('atualiza breadcrumb')
+        this.props.handleChange(results['categories'])
+        })
   }
   render() {
     return (

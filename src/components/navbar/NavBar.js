@@ -16,10 +16,8 @@ class NavBar extends Component {
   constructor(props, context) {
     super(props, context);
     this.state = {
-      value: '',
-      onSearching: false
+      value: ''
     };
-    const { router } = this.props
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);

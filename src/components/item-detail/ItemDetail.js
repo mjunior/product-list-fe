@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './ItemDetail.css'
 import {
-  Container,
   Col,
   Row
 } from 'reactstrap';

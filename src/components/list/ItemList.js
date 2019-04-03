@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import shippingIcon from '../../assets/images/ic_shipping.png'
+import Currency from './Currency'
 import {
   Container,
   Col,
@@ -12,16 +13,12 @@ const ItemList = ({item}) => (
     <Row className="no-gutters">
       <Col md={{ size: 'auto' }}>
         <div className="item_image">
-          < img className="item_image--thumbnail"
-            src={
-              'https://cdn2.wpbeginner.com/wp-content/uploads/2018/05/productcataloginwp-180x180.png'
-            }
-          />
+          <img className="item_image--thumbnail" src={item.picture} />
         </div>
       </Col>
       <Col className="flex-grow-1">
         <div className="item_price">
-          <p>R$ 90 <span className="item_price_shipping"></span></p>
+            <p>{Currency[item.price.currency]} 90 <span className={item.free_shipping === true ? 'item_price_shipping': ''}></span></p>
         </div>
         <div className="item_description">
           <p>{item.title}</p>
